@@ -1,0 +1,3 @@
+<template>
+    <c-my-component></c-my-component>
+</template>

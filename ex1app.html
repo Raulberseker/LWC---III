@@ -1,0 +1,22 @@
+<template>
+	<div class="container">
+		<div class="form-group">
+			<label>Nome:</label>
+			<input class="form-input" type="text" value={name} oninput={handleNameChange} />
+		</div>
+		<div class="form-group">
+			<label>Peso (kg):</label>
+			<input class="form-input" type="number" step="0.01" value={weight} oninput={handleWeightChange} />
+		</div>
+		<div class="form-group">
+			<label>Altura (m):</label>
+			<input class="form-input" type="number" step="0.01" value={height} oninput={handleHeightChange} />
+		</div>
+		<div>
+			<button onclick={calculateIMC}>Calcular IMC</button>
+		</div>
+		<div if:true={imc} class="imc-result">
+			Seu IMC é: {imc}
+		</div>
+	</div>
+</template>
